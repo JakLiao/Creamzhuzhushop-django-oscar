@@ -1,0 +1,45 @@
+{% load shop_extras %}
+{% if promotion.images %}
+<section class="slider-container">
+
+<!-- Slider Image -->
+    <div id="mainSlider" class="nivoSlider slider-image">
+        {% for promotion_image in promotion.images.all %}
+            {% with promotion_image.name|split:"|" as descs %}
+            <img src="{{ promotion_image.image.url }}" title="#{{ descs.0 }}" />
+            {% endwith %}
+        {% endfor %}
+    </div>
+    {% for promotion_image in promotion.images.all %}
+        {% with promotion_image.name|split:"|" as descs %}
+        <div id="{{ descs.0 }}" class="nivo-html-caption">
+            <div class="slider-progress"></div>
+            <div class="container slider-height">
+                <div class="row slider-height">
+                    <div class="col-xs-offset-6 col-xs-6 slider-height">
+                        <div class="slide-text">
+                            <div class="middle-text">
+                                <div class="cap-dec text-black text-uppercase wow fadeInDown" data-wow-duration="0.9s" data-wow-delay="0s">
+                                    <h3>{{ descs.1 }}</h3>
+                                </div>
+                                <div class="cap-title text-black text-uppercase wow fadeInDown" data-wow-duration="1.5s" data-wow-delay="0.5s">
+                                    <h2>{{ descs.2 }}</h2>
+                                </div>
+                                <div class="cap-para wow fadeInDown" data-wow-duration="2s" data-wow-delay="1s">
+                                    <p>{{ descs.3 }}</p>
+                                </div>
+                                <div class="cap-shop wow text-uppercase fadeInDown" data-wow-duration="2.5s" data-wow-delay="1.5s">
+                                    <a href="{% if promotion_image.link_url %}{{ promotion_image.link_url }}{% else %}#{% endif %}">我要看看</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endwith %}
+    {% endfor %}
+</section>
+{% endif %}
+
+

@@ -1,0 +1,128 @@
+{% load i18n %}
+{% load staticfiles %}
+<footer class="footer container-fluid">
+    {% block footer %}
+        {% comment %}
+            Could be used for displaying links to privacy policy, terms of service, etc.
+            We have a CSS class defined:
+                <ul class="footer_links inline">
+                    ...
+                </ul>
+         {% endcomment %}
+        <!-- Start footer area -->
+        <footer id="footer" class="footer-area">
+            <div class="footer-top-area text-center ptb-40">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="footer-top-content">
+                                <a href="{{ homepage_url }}">
+{#                                    <img src="{% static "images/footer/logo.png" %}" alt="">#}
+                                </a>
+                                <p class="pb-30">{{ shop_name }}是最好的小店</p>
+                                <ul class="social-icon">
+                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-middle-area footer-bg">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-4 col-sm-6">
+                            <div class="single-footer-inner">
+                                <h5 class="footer-title text-white">联系方式</h5>
+                                <ul class="footer-contact">
+                                    <li class="contact-icon">
+                                        <img alt="" src="{% static "images/footer/icon/1.png" %}">
+                                    </li>
+                                    <li class="footer-text text-ash">
+                                        <p>宇宙太阳系</p>
+                                        <p>地球</p>
+                                    </li>
+                                </ul>
+                                <ul class="footer-contact">
+                                    <li class="contact-icon">
+                                        <img alt="" src="{% static "images/footer/icon/2.png" %}">
+                                    </li>
+                                    <li class="footer-text text-ash">
+                                        <p>Telephone : (+86) 15888888888</p>
+                                        <p>Telephone : (+86) 18888888888</p>
+                                    </li>
+                                </ul>
+                                <ul class="footer-contact">
+                                    <li class="contact-icon">
+                                        <img alt="" src="{% static "images/footer/icon/3.png" %}">
+                                    </li>
+                                    <li class="footer-text text-ash">
+                                        <p>邮箱 : liaohaojie@126.com</p>
+                                        <p>网站 : creamzhuzhu.ml</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-3">
+                            <div class="single-footer-inner">
+                                <h5 class="footer-title text-white">联系方式</h5>
+                                <ul class="footer-menu">
+                                    <li><a href="{{ homepage_url }}">{% trans 'Home' %}</a></li>
+                                    <li><a href="about.html">关于我们</a></li>
+                                    <li><a href="contact.html">联系我们</a></li>
+                                    <li><a href="#">我们的博客</a></li>
+                                    <li><a href="#">客服中心</a></li>
+                                    <li><a href="#">保密政策</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-3">
+                            <div class="single-footer-inner">
+                                <h5 class="footer-title text-white">帮助</h5>
+                                <ul class="footer-menu">
+                                    <li><a href="#">物流服务</a></li>
+                                    <li><a href="">订单跟踪</a></li>
+                                    <li><a href="#">退货</a></li>
+                                    <li><a href="#">礼品卡</a></li>
+                                    <li><a href="#">送货上门</a></li>
+                                    <li><a href="#">在线支持</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom-area">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-4 col-sm-6 col-xs-12">
+                            <div class="copyright">
+                                <p>Copyright &copy; 2017.{{ shop_name }} All rights reserved.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-5 hidden-sm hidden-xs">
+                            <nav>
+                                <ul class="footer-bottom-menu">
+                                    <li><a href="#">网站导航</a></li>
+                                    <li><a href="contact.html">联系我们</a></li>
+                                    <li><a href="">心愿单</a></li>
+                                    <li><a href="#">新发现</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <div class="col-md-3 col-sm-6 col-xs-12">
+                            <div class="payment-method b-img">
+                                <img alt="" src="{% static "images/footer/footer-bottom.png" %}">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- End footer area -->
+    {% endblock %}
+</footer>

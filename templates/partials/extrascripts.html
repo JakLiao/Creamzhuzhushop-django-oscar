@@ -1,0 +1,9 @@
+{% comment %}
+    This file exists so you can easily add your own Javascript without
+    having to fork layout.html etc. Instead, just override this file.
+{% endcomment %}
+{% load staticfiles %}
+<!-- All js plugins included in this file. -->
+<script type="text/javascript" src="{% static "js/plugins.js" %}"></script>
+<!-- Main js file that contents all jQuery plugins activation. -->
+<script type="text/javascript" src="{% static "js/main.js" %}"></script>
